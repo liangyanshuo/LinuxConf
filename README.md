@@ -34,6 +34,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 
 mv LinuxConf/.condarc ~/.condarc
 mamba env create -f environment.yml
+mamba create -n env_name python=version
 ```
 
 # git
