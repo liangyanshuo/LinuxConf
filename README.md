@@ -19,7 +19,7 @@ source ~/.zshrc
 ```
 mv LinuxConf/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim ~/.vimrc # 执行 :PluginInstall
+vim ~/.vimrc # conduct :PluginInstall
 
 # Install YCM
 cd ~/.vim/bundle/YouCompleteMe
@@ -54,4 +54,12 @@ scp -o ProxyJump=userB@ipB local_file userC@ipC:/path/to/destination
 ```
 mamba install -c "nvidia/label/cuda-11.7.1" cuda # Using this command can install whole cuda，including nvcc
 mamba install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+
+# gcc and gxx for deepspeed
+```
+mamba install -c conda-forge gcc_linux-64==version # the version should be consistent with gxx
+mamba install -c conda-forge gxx_linux-64==version # the version should be consistent with gcc
+ln -s {path}/miniforge3/envs/{envs_name}/bin/x86_64-conda_cos6-linux-gnu-gcc {path}/miniforge3/envs/{envs_name}/bin/gcc
+ln -s {path}/miniforge3/envs/{envs_name}/bin/x86_64-conda_cos6-linux-gnu-g++ {path}/miniforge3/envs/{envs_name}/bin/g++
 ```
