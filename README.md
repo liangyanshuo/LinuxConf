@@ -66,6 +66,8 @@ ln -s {path}/miniforge3/envs/{envs_name}/bin/x86_64-conda_cos6-linux-gnu-g++ {pa
 ```
 
 # using git clone to install datasets and models from hugging face
+```
 mamba install git git-lfs
 git lfs install
 git clone https://huggingface.co/google-t5/t5-small 
+```
